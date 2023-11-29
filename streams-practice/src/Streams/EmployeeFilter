@@ -1,0 +1,56 @@
+package Streams;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+class Employee {
+    private int id;
+    private String name;
+    private int age;
+    private double salary;
+
+    public Employee(int id, String name, int age, double salary) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+}
+
+public class EmployeeFilter {
+    public static List<String> filterAndTransform(List<Employee> employees) {
+        // Your code here
+    }
+
+    public static void main(String[] args) {
+        List<Employee> employees = Arrays.asList(
+                new Employee(1, "Alice", 35, 60000.0),
+                new Employee(2, "Bob", 28, 45000.0),
+                new Employee(3, "Charlie", 40, 75000.0),
+                new Employee(4, "David", 32, 55000.0),
+                new Employee(5, "Eve", 25, 40000.0)
+        );
+
+        List<String> result = filterAndTransform(employees);
+
+        System.out.println("Filtered and transformed employee names: " + result);
+    }
+}
+
